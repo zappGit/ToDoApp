@@ -6,6 +6,7 @@
 //
 
 import XCTest
+import CoreLocation
 @testable import ToDoApp
 
 class TestCellTests: XCTestCase {
@@ -32,8 +33,64 @@ class TestCellTests: XCTestCase {
     
     func testCellHasTitleInContentView() {
         XCTAssertTrue(cell.titleLabel.isDescendant(of: cell.contentView))//что то есть на контент вью
+    } 
+    
+    func testCellHasDateLabel() {
+        XCTAssertNotNil(cell.dateLabel)
     }
-
+    
+    func testCellHasDateInContentView() {
+        XCTAssertTrue(cell.dateLabel.isDescendant(of: cell.contentView))//что то есть на контент вью
+    }
+    func testCellHasLocationLabel() {
+        XCTAssertNotNil(cell.locationLabel)
+    }
+    
+    func testCellHasLocationInContentView() {
+        XCTAssertTrue(cell.locationLabel.isDescendant(of: cell.contentView))//что то есть на контент вью
+    }
+    func testConfigureSetsTitle(){
+        let task = Task(title: "Foo")
+        cell.configure(withTask: task)
+        XCTAssertEqual(task.title, cell.titleLabel.text)
+    }
+    
+    func testConfigureSetsDate() {
+        let task = Task(title: "Foo")
+        cell.configure(withTask: task)
+        let df = DateFormatter() //nsdateformatter.com
+        df.dateFormat = "dd.MM.yy"
+        let date = task.date
+        let dateString = df.string(from: date)
+        
+        XCTAssertEqual(cell.dateLabel.text, dateString)
+    }
+    
+    func testConfigureLocationSets() {
+        let task = Task(title: "Foo", location: Location(name: "Home", coordinates: CLLocationCoordinate2D(latitude: 1, longitude: 1)))
+        cell.configure(withTask: task)
+        XCTAssertEqual(cell.locationLabel.text, task.location?.name)
+    }
+    
+    func configureCellWithTask() {
+        let task = Task(title: "Foo")
+        cell.configure(withTask: task, done: true)
+    }
+    
+    func testDoneTaskShouldStrikeThrow() {
+        configureCellWithTask()
+        let attributeString = NSAttributedString(string: "Foo", attributes: [NSAttributedString.Key.strikethroughStyle : NSUnderlineStyle.single.rawValue])
+        XCTAssertEqual(cell.titleLabel.attributedText, attributeString)
+    }
+    
+    func testDoneDateLabelEqualsNil() {
+        configureCellWithTask()
+        XCTAssertNil(cell.dateLabel)
+    }
+    func testDoneLocationLabelEqualsNil() {
+        configureCellWithTask()
+        XCTAssertNil(cell.locationLabel)
+    }
 }
 
 extension TestCellTests {

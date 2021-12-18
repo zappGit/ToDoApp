@@ -24,6 +24,10 @@
 		B84F5F5E2768E64100AADE9F /* TaskManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B84F5F5D2768E64100AADE9F /* TaskManager.swift */; };
 		B85E432A276B964A0069A83D /* DataProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B85E4329276B964A0069A83D /* DataProviderTests.swift */; };
 		B85E432C276B9EA70069A83D /* TaskCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B85E432B276B9EA70069A83D /* TaskCell.swift */; };
+		B88E36F8276DD9A500914D03 /* DetailViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B88E36F7276DD9A500914D03 /* DetailViewControllerTest.swift */; };
+		B88E36FA276DDA1D00914D03 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B88E36F9276DDA1D00914D03 /* DetailViewController.swift */; };
+		B88E36FC276E52FF00914D03 /* NewTaskViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B88E36FB276E52FF00914D03 /* NewTaskViewControllerTests.swift */; };
+		B88E36FE276E537300914D03 /* NewTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B88E36FD276E537300914D03 /* NewTaskViewController.swift */; };
 		B8996E15276CE46D00F017C6 /* TestCellTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8996E14276CE46D00F017C6 /* TestCellTests.swift */; };
 		B8A5F3E5276B830500C2CCB7 /* TaskListViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8A5F3E4276B830500C2CCB7 /* TaskListViewControllerTests.swift */; };
 		B8A5F3E7276B911200C2CCB7 /* DataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8A5F3E6276B911200C2CCB7 /* DataProvider.swift */; };
@@ -68,6 +72,10 @@
 		B84F5F5D2768E64100AADE9F /* TaskManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskManager.swift; sourceTree = "<group>"; };
 		B85E4329276B964A0069A83D /* DataProviderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataProviderTests.swift; sourceTree = "<group>"; };
 		B85E432B276B9EA70069A83D /* TaskCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskCell.swift; sourceTree = "<group>"; };
+		B88E36F7276DD9A500914D03 /* DetailViewControllerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewControllerTest.swift; sourceTree = "<group>"; };
+		B88E36F9276DDA1D00914D03 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		B88E36FB276E52FF00914D03 /* NewTaskViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTaskViewControllerTests.swift; sourceTree = "<group>"; };
+		B88E36FD276E537300914D03 /* NewTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTaskViewController.swift; sourceTree = "<group>"; };
 		B8996E14276CE46D00F017C6 /* TestCellTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCellTests.swift; sourceTree = "<group>"; };
 		B8A5F3E4276B830500C2CCB7 /* TaskListViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskListViewControllerTests.swift; sourceTree = "<group>"; };
 		B8A5F3E6276B911200C2CCB7 /* DataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataProvider.swift; sourceTree = "<group>"; };
@@ -170,6 +178,8 @@
 			children = (
 				B84F5F202764FB0600AADE9F /* TaskListViewController.swift */,
 				B8A5F3E6276B911200C2CCB7 /* DataProvider.swift */,
+				B88E36F9276DDA1D00914D03 /* DetailViewController.swift */,
+				B88E36FD276E537300914D03 /* NewTaskViewController.swift */,
 				B84F5F4D2764FC5400AADE9F /* View */,
 				B84F5F4C2764FC4D00AADE9F /* Model */,
 				B84F5F4F2764FC7B00AADE9F /* Support */,
@@ -228,6 +238,8 @@
 			children = (
 				B8A5F3E4276B830500C2CCB7 /* TaskListViewControllerTests.swift */,
 				B85E4329276B964A0069A83D /* DataProviderTests.swift */,
+				B88E36F7276DD9A500914D03 /* DetailViewControllerTest.swift */,
+				B88E36FB276E52FF00914D03 /* NewTaskViewControllerTests.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -363,11 +375,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B88E36FA276DDA1D00914D03 /* DetailViewController.swift in Sources */,
 				B84F5F5E2768E64100AADE9F /* TaskManager.swift in Sources */,
 				B84F5F542765003700AADE9F /* Task.swift in Sources */,
 				B84F5F212764FB0600AADE9F /* TaskListViewController.swift in Sources */,
 				B8A5F3E7276B911200C2CCB7 /* DataProvider.swift in Sources */,
 				B85E432C276B9EA70069A83D /* TaskCell.swift in Sources */,
+				B88E36FE276E537300914D03 /* NewTaskViewController.swift in Sources */,
 				B84F5F562767B08A00AADE9F /* Location.swift in Sources */,
 				B84F5F1D2764FB0600AADE9F /* AppDelegate.swift in Sources */,
 				B84F5F1F2764FB0600AADE9F /* SceneDelegate.swift in Sources */,
@@ -381,6 +395,8 @@
 				B84F5F512764FFA600AADE9F /* TaskTest.swift in Sources */,
 				B84F5F342764FB0700AADE9F /* ToDoAppTests.swift in Sources */,
 				B85E432A276B964A0069A83D /* DataProviderTests.swift in Sources */,
+				B88E36FC276E52FF00914D03 /* NewTaskViewControllerTests.swift in Sources */,
+				B88E36F8276DD9A500914D03 /* DetailViewControllerTest.swift in Sources */,
 				B84F5F5B2768E5D000AADE9F /* TaskManagerTests.swift in Sources */,
 				B8996E15276CE46D00F017C6 /* TestCellTests.swift in Sources */,
 				B8A5F3E5276B830500C2CCB7 /* TaskListViewControllerTests.swift in Sources */,
